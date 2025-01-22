@@ -118,6 +118,9 @@ class _DNSPodLexiconClient(dns_common_lexicon.LexiconClient):
                                   .format(domain_name, e, ' ({0})'.format(hint) if hint else ''))
 
     def _handle_general_error(self, e, domain_name):
-        if not (str(e).startswith('Domain name invalid') or str(e).find('当前域名未添加') >= 0):
-            return errors.PluginError('Unexpected error determining zone identifier for {0}: {1}'
-                                      .format(domain_name, e))
+        # Only return None for "Domain name invalid" or "Domain not found" errors
+        # to continue trying other domain_name guesses
+        if str(e) == 'No domain found' or str(e).startswith('Domain name invalid') or str(e).find('当前域名未添加') >= 0:
+            return None
+        return errors.PluginError('Unexpected error determining zone identifier for {0}: {1}'
+                                  .format(domain_name, e))

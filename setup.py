@@ -4,16 +4,16 @@ from setuptools import setup
 from setuptools import find_packages
 
 
-version = '0.24.2'
+version = '0.25.0'
 
 # Remember to update local-oldest-requirements.txt when changing the minimum
 # acme/certbot version.
 install_requires = [
-    'acme>=0.21.1',
-    'certbot>=0.21.1',
-    'dns-lexicon',
-    'mock',
-    'setuptools',
+    'acme>=2.12.0',
+    'certbot>=2.12.0',
+    'dns-lexicon>=3.8.3',
+    'mock>=4.0.3',
+    'setuptools>=59.2.0',
 ]
 
 docs_extras = [
@@ -29,7 +29,7 @@ setup(
     author="Certbot Project",
     author_email='tengattack@gmail.com',
     license='Apache License 2.0',
-    python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*',
+    python_requires='>=3.8',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Environment :: Plugins',
@@ -37,12 +37,12 @@ setup(
         'License :: OSI Approved :: Apache Software License',
         'Operating System :: POSIX :: Linux',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
+        'Programming Language :: Python :: 3.12',
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Security',
         'Topic :: System :: Installation/Setup',

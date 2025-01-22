@@ -1,4 +1,5 @@
-acme>=0.21.1
+acme>=2.12.0
+certbot>=2.12.0
 dns-lexicon>=3.8.3
 mock>=4.0.3
 setuptools>=59.2.0

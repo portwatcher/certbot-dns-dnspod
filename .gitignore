@@ -1,2 +1,26 @@
 .DS_Store
 .vs
+__pycache__
+
+# Python build artifacts
+*.pyc
+__pycache__/
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+venv/
+.venv/
+
+# IDE files
+.vscode/
+.idea/
+
+# Test cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Documentation build
+docs/_build/
